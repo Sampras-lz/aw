@@ -1,0 +1,23 @@
+<% include partials/header %>
+<div class="jumbotron container">
+	<h1>YelpCamp</h1>
+	<p>This are some of the selected camps</p>
+	<a href="/CreateSite" class="btn btn-primary btn-large">Add new Camp</a>
+</div>
+<div class="container-fluid">
+	<div class="row text-center" style="display: flex; flex-wrap: wrap;">
+		<% for(var i =0 ;i<campsites.length ; i++ ){%>
+			<div class="col-sm-4 col-md-3">
+				<a href="/campsites/<%=campsites[i]._id%>">
+					<div class="thumbnail">
+						<img  src="<%= campsites[i].image%>">
+						<div class="caption"> 
+							<h4><%= campsites[i].name%></h4>
+						</div>
+					</div>
+				</a>
+			</div>
+		<% } %>
+	</div>
+</div>
+<% include partials/footer %>

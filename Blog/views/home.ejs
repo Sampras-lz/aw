@@ -1,0 +1,13 @@
+<% include ./partials/header.ejs %>
+	<% campsites.forEach(function(blog){%>
+		<div>
+			<a href="show/<%=blog._id%>" ><h2 style="margin:15px" class="ui header"><%= blog.name %></h2></a>
+			<div class="ui container" >
+				<img class="ui large centered rounded image" style="max-height:650px; width:auto ;min-width:300px" src="<%= blog.image %>" >
+			</div>
+			<h5 style="margin:2px">Created:<%= blog.date.toDateString() %></h5>
+			<h5 style="margin:5px"><%- blog.Desc.substring(0,50) %>...<a href="show/<%=blog._id%>" >Read more.</a></h5>
+		</div>
+	<hr>
+	<% } )%>
+<% include ./partials/footer.ejs %>

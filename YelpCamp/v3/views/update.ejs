@@ -1,0 +1,28 @@
+<% include ./partials/header.ejs %>
+    <div>
+        <div style="margin:2em;">
+            <h2 class="ui header">Update <%= camp.name %></h2>
+    	
+        </div>
+    	<div class="ui basic segment">
+    	    <form method="POST" action="/update/<%=camp._id%>" class="ui form">
+    			<div class="field">
+    				<label>Title:</label>
+    				<input class="required field" type="text" name="name" value="<%=camp.name%>" required placeholder="What's it called?">
+    			</div>
+    			<div class="field">
+    				<label>Image Link:</label>
+    				<input class="required field" type="text" name="image" value="<%=camp.image%>" required placeholder="Can I see it??">
+    			</div>
+    			<div class="field">
+                    <label>Description</label>
+    				<textarea name="Desc" placeholder="Tell me more...."><%=camp.Desc%></textarea>
+    			</div>
+    			<div style="margin-top:10px;">
+    				 <a class=""  href="/"><button type="button" class="ui orange basic button"><i class="ui remove icon "></i>Cancel</button></a>
+    				<button class="ui green basic button" style="float:right" ><i class="ui Checkmark icon "></i> Submit!</button>
+    			</div>
+    		</form>
+    	</div>
+    </div>
+<% include ./partials/footer.ejs %>

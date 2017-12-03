@@ -1,0 +1,19 @@
+<% include partials/header %>
+<div class="container">
+    <div class="row">
+        <form method="POST" action="/CreateSite">
+            <div class="form-group">
+				<input class="form-control" type="text" name="name" placeholder="name">
+			</div>
+			<div class="form-group">
+				<input class="form-control" type="text" name="image" placeholder="image url">
+			</div>
+			<div class="form-group btn-group">
+			     <a class="btn btn-lg   btn-warning" width="40%" href="/campsites">Go Back</a>
+				<button class="btn btn-lg btn-success" width="40%" >Submit!</button>
+			</div>
+        </form>
+    </div>
+</div>
+
+<% include partials/footer %>

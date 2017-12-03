@@ -1,0 +1,26 @@
+<% include ./partials/header.ejs %>
+<!--aligned grid center aligned middle-->
+<!--<div class="ui main text container" id="text-container" style="margin:150 px" >-->
+	<div class="ui basic segment">
+    	    <form method="POST" action="/new" class="ui form">
+    			<div class="field">
+    				<label>Title:</label>
+    				<input class="required field" type="text" name="name" required placeholder="What's it called?">
+    			</div>
+    			<div class="field">
+    				<label>Image Link:</label>
+    				<input class="required field" type="text" name="image" required placeholder="Can I see it??">
+    			</div>
+    			<div class="field">
+                    <label>Description</label>
+    				<textarea name="Desc" placeholder="Tell me more...."></textarea>
+    			</div>
+    			<div style="margin-top:10px;">
+    				 <a class=""  href="/"><button type="button" class="ui yellow basic button"><i class="ui Arrow left icon "></i> Go Back..</button></a>
+    				<button class="ui green basic button" style="float:right" ><i class="ui Checkmark icon "></i> Submit!</button>
+    			</div>
+    		</form>
+    	</div>
+<!--</div>-->
+
+<% include ./partials/footer.ejs %>

@@ -1,0 +1,13 @@
+<h2>This is the <b>Posts</b> page!!!</h2>
+
+<ul>
+<% posts.forEach(function(post){ %>
+    <li><%=post.title%> - <%=post.author%></li>
+   <% }) %>
+</ul>
+
+<form action="/newpost" method="POST">
+    <input type="text" name ="title" placeholder="Title">
+    <input type="text" name="author" placeholder="Author">
+    <button>Submit</button>
+</form>

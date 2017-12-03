@@ -1,0 +1,17 @@
+{
+  "name": "intermediate-node",
+  "version": "1.0.0",
+  "description": "intermediate server handling",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "ejs": "^2.5.7",
+    "express": "^4.15.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sampras lopes",
+  "license": "ISC"
+}

@@ -1,0 +1,21 @@
+<% include ./partials/header.ejs %>
+    <div>
+        <div style="margin:2em;">
+            <h1 class="ui header" style="display:inline;"><%= blog.name %></h1> 
+    	    <h5 style="display:inline ; float:right;"><%= blog.date.toDateString() %></h5>
+    	
+        </div>
+    	<div class="ui  padded segment">
+    	    <div class="ui container" style="max-height:650px min-width:4000px">
+    	        <img class="ui centered rounded image" src="<%= blog.image %>" >
+    	    </div>
+    	    <div  style="text-align:right;margin-top:10px;">
+    	        <a href="/edit/<%=blog._id%>"><button class="tiny ui secondary basic button"><i style=" font-size:1.5 em "class="Edit icon"></i>Edit</button></a>
+    	        <a href="/delete/<%=blog._id%>"><button class=" mini ui negative basic button"><i style=" font-size:1.5em " class="Trash Outline icon"></i>Delete</button></a>
+    	    </div>
+    	    <p>
+    	        <h5><%- blog.Desc%></h5>
+    	    </p>
+    	</div>
+    </div>
+<% include ./partials/footer.ejs %>

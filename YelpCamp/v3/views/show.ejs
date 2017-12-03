@@ -1,0 +1,29 @@
+<% include partials/header %>
+<div class="jumbotron container">
+	<h1><%= campsite.name %></h1>
+</div>
+<div class="container text-center"><img class="rounded" src="<%= campsite.image %>" </div>
+<div class="border border-secondary rounded" id="description">
+    <p>
+        <h5><%- campsite.Desc %> </h5>
+    </p>
+</div>
+<div class="border border-info rounded" id="comments">
+   <%  if(User){ %>
+    <form method="POST" action="/newcomment/<%= campsite._id%>">
+        <input type="text" name="content" placeholder="content">
+        <button>comment!!</button>
+    </form>
+    <% }else{%>
+    <h4><a href="/login">Login</a> to add comment</h4>
+    
+    <% } %>
+    <% campsite.Comments.forEach(function(com){%>
+    <%= com.name%>
+    <%= com.content %>
+    <% }) %>
+    
+</div>
+<a href="/edit/<%=campsite._id%>" class="btn btn-primary">edit</a>
+<a href="/campsites" class="btn btn-primary">Go Back</a>
+<% include partials/footer %>
